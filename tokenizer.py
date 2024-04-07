@@ -2,8 +2,11 @@ import spacy
 import re
 import string
 from spacy.lang.en.stop_words import STOP_WORDS
+import pickle
 
-nlp = spacy.load('en_core_web_md')
+with open('en_core_web_md.pickle', 'rb') as file:
+    nlp = pickle.load(file)
+
 punctuations = string.punctuation
 
 def tokenizer(text):
