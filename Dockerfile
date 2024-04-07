@@ -17,4 +17,4 @@ RUN python -m spacy download en_core_web_md
 EXPOSE $PORT
 
 # Start the application using Gunicorn
-CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT main:app
+CMD uvicorn --workers=4 --bind 0.0.0.0:$PORT main:app
