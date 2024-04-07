@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 RUN python -m spacy download en_core_web_md
 
 # Expose the port
-EXPOSE $PORT
+EXPOSE 8000
 
 # Start the application using Gunicorn
-CMD uvicorn --workers=4 --bind 0.0.0.0:$PORT main:app
+CMD ["uvicorn", "--workers=4", "--host", "0.0.0.0", "main:app"]
