@@ -4,6 +4,10 @@ from pathlib import Path
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+import spacy.cli
+# Install spaCy model
+spacy.cli.download("en_core_web_sm")
+
 from tokenizer import tokenizer,sentiment
 
 ###########################################################################################################################
