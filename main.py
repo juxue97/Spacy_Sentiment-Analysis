@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 import spacy.cli
 # Install spaCy model
-spacy.cli.download("en_core_web_sm")
+spacy.cli.download("en_core_web_md")
 
 from tokenizer import tokenizer,sentiment
 
