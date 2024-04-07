@@ -1,2 +1,14 @@
 # Spacy_Sentiment-Analysis
-IMDB Reviews using Spacy and ML model
+- IMDB Reviews using Spacy and ML model
+  - Main obj : create an classification model which could perform sentiment analysis  
+- Preprocessing steps:
+  - remove symbols, emoji, html scripts
+  - tokenizzation
+  - remove propn
+  - remove stopwords, punctuations
+  - Word Vectorization (BoW, TF-IDF)
+- Model Pipeline (Preprocess -> vectorizer -> classifier)
+- Build web app using fastapi
+- to run the simple web app, in the cli command, type 'uvicorn main:app'
+- press the link and and type /docs on the hyperlink (ex. http://127.0.0.1:8000/docs)
+- press try and insert the string and execute, see the result.
